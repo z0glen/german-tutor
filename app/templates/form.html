@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>German Tutor</h1>
+  <form action="" method="post">
+    New Word:<br />
+    <input type="text" name="word"/><br />
+    Context:<br />
+    <input type="text" name="context" /><br />
+    <input type="submit" value="Submit" />
+  </form>
+  <div>
+    {% with words=words %}
+    {% if words %}
+    <ul>
+      {% for key, value in words.items() %}
+      <li>
+        {{ key }}: {{ value }}
+      </li><br />
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+  </div>
+{% endblock %}
