@@ -1,14 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>German Tutor</h1>
-  <!-- <form action="" method="post">
-    New Word:<br />
-    <input type="text" name="word"/><br />
-    Context:<br />
-    <input type="text" name="context" /><br />
-    <input type="submit" value="Submit" />
-  </form> -->
+  <h1>User: {{ user.username }}</h1>
+  <hr />
   <form action="" method="post">
       {{ form.hidden_tag() }}
       <p>
@@ -41,21 +35,8 @@
       </p>
       <p>{{ form.submit() }}</p>
   </form>
-  <!-- <div>
-    {% with words=words %}
-    {% if words %}
-    <ul>
-      {% for key, value in words.items() %}
-      <li>
-        {{ key }}: {{ value }}
-      </li><br />
-      {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
-  </div> -->
-  {% for word in words %}
-  <p>
-  {% include _word.html %}
-  </p>
+  <hr />
+  {% for post in posts %}
+    {% include '_word.html' %}
+  {% endfor %}
 {% endblock %}
