@@ -7,26 +7,9 @@ from app import app, db
 from app.forms import LoginForm, RegistrationForm, WordForm
 from app.models import User, Word
 
-# @app.route("/")
-# def show_form():
-#     with open('dictionary.json', 'r') as infile:
-#         data = json.load(infile)
-#         print(data)
-#     return render_template('form.html', words=data)
-#
-# @app.route("/", methods=['POST'])
-# def word():
-#     text = request.form['word']
-#     context = request.form['context']
-#     data = {"text": text, "context": context}
-#     with open('dictionary.json', 'w') as outfile:
-#         json.dump(data, outfile)
-#     flash('Got word {} in context {}'.format(text, context))
-#     return redirect(url_for('show_form'))
-
 @app.route("/")
 def splash():
-    return render_template('base.html')
+    return render_template('splash.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -72,11 +55,13 @@ def user(username):
         return redirect(url_for('user', username=current_user.username))
     user = User.query.filter_by(username=username).first_or_404()
     posts = current_user.words.all()
-    # posts = [
-    #     {'word': 'Test Word 1', 'context': 'Test Context 1', 'english': 'Test English 1'},
-    #     {'word': 'Test Word 1', 'context': 'Test Context 1', 'english': 'Test English 1'}
-    # ]
     return render_template('user.html', user=user, posts=posts, form=form)
+
+@app.route('/practice')
+@login_required
+def practice():
+    words = current_user.words.all()
+    return render_template('practice.html', user=user, words=words)
 
 if __name__ == '__main__':
     app.run(debug=True)
