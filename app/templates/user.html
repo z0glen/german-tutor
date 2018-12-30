@@ -1,40 +1,14 @@
 {% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
-{% block content %}
+{% block app_content %}
   <h1>User: {{ user.username }}</h1>
   <hr />
-  <form action="" method="post">
-      {{ form.hidden_tag() }}
-      <p>
-          {{ form.word.label }}<br>
-          {{ form.word(size=32) }}<br>
-          {% for error in form.word.errors %}
-          <span style="color: red;">[{{ error }}]</span>
-          {% endfor %}
-      </p>
-      <p>
-          {{ form.translation.label }}<br>
-          {{ form.translation(size=32) }}<br>
-          {% for error in form.translation.errors %}
-          <span style="color: red;">[{{ error }}]</span>
-          {% endfor %}
-      </p>
-      <p>
-          {{ form.context.label }}<br>
-          {{ form.context(size=32) }}<br>
-          {% for error in form.context.errors %}
-          <span style="color: red;">[{{ error }}]</span>
-          {% endfor %}
-      </p>
-      <p>
-          {{ form.note.label }}<br>
-          {{ form.note(size=32) }}<br>
-          {% for error in form.note.errors %}
-          <span style="color: red;">[{{ error }}]</span>
-          {% endfor %}
-      </p>
-      <p>{{ form.submit() }}</p>
-  </form>
+  <div class="row">
+    <div class="col-md-4">
+      {{ wtf.quick_form(form) }}
+    </div>
+  </div>
   <hr />
   {% for post in posts %}
     {% include '_word.html' %}
