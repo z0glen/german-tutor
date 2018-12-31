@@ -1,1 +1,1 @@
-web: flask db upgrade; gunicorn german-tutor:app
+web: flask db upgrade; gunicorn atart:app
