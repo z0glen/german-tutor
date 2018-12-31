@@ -14,9 +14,8 @@
 {% endblock %}
 
 <div class="flashcard">
-  <b>{{ post.word }}</b>
+  <b>{{ post.word }}</b><br />
   <p class="target" hidden>{{ post.translation }}</p>
-  <p>Means:</p>
   <input type="text" class="guess"/>
   <div class="response"></div>
   <input type="submit" value="Submit" onclick="checkFlashcard(this)"/>
