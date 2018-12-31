@@ -1,6 +1,5 @@
 __pycache__/
 app.db
-migrations/
 dictionary.json
 .coverage
 htmlcov
