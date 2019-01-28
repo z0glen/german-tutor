@@ -1,5 +1,5 @@
-# german-tutor
-A website to help manage words learned in a new language (namely German).
+# language-tutor
+A website to help manage words learned in a new language.
 
 Check out the live demo [here](https://german-tutor.herokuapp.com/).
 
