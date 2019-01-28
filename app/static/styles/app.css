@@ -6,3 +6,7 @@
 input {
   margin: 5px 0 5px 0;
 }
+
+.jumbotron {
+  text-align: center;
+}

@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
 {% block app_content %}
-<h1>Welcome to German Tutor.</h1>
-<p>
-  Login or sign-up above!
-</p>
+<div class="jumbotron">
+  <h1 class="display-4">Meet your new German Tutor.</h1>
+  <p class="lead">Looking to keep track of new words or phrases ?</p>
+  <p class="lead">Get started today!</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-large" href="{{ url_for('login') }}" role="button">Login</a>
+    <a class="btn btn-primary btn-large" href="{{ url_for('register') }}" role="button">Sign Up</a>
+</div>
 {% endblock %}
