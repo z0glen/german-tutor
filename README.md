@@ -1,7 +1,7 @@
 # german-tutor
 A website to help manage words learned in a new language (namely German).
 
-Check out the live demo [here](www.german-tutor.herokuapp.com).
+Check out the live demo [here](https://www.german-tutor.herokuapp.com).
 
 ## Inspiration
 When I was learning German while living in Germany, I wanted to keep track of words and phrases that I encountered 
