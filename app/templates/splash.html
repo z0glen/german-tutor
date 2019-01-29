@@ -2,11 +2,42 @@
 
 {% block app_content %}
 <div class="jumbotron">
-  <h1 class="display-4">Meet your new German Tutor.</h1>
-  <p class="lead">Looking to keep track of new words or phrases ?</p>
+  <h1 class="display-4">Meet your new Language Tutor.</h1>
+  <p class="lead">Looking to keep track of new words or phrases?</p>
   <p class="lead">Get started today!</p>
   <p class="lead">
-    <a class="btn btn-primary btn-large" href="{{ url_for('login') }}" role="button">Login</a>
+    <a class="btn btn-success btn-large" href="{{ url_for('login') }}" role="button">Login</a>
     <a class="btn btn-primary btn-large" href="{{ url_for('register') }}" role="button">Sign Up</a>
+  </p>
+</div>
+<div class="jumbotron">
+  <h1 class="display-4">Inspiration.</h1>
+  <p class="lead">
+    While I was in Germany, I found myself completely surrounded by the language.
+    I needed a way to keep track of the new words and phrases that I saw while
+    walking around or reading a book. I started with simple flashcards, but quickly
+    realized that I needed a better way to store all the information I wanted to
+    remember. I started working on language-tutor and it proved to be invaluable
+    on my quest to learn German.
+  </p>
+</div>
+<div class="jumbotron">
+  <h1 class="display-4">Future Directions.</h1>
+  <p class="lead">
+    I have lots of ideas on how to improve language-tutor. I want to be able to
+    edit the words after I've entered them, add more options for practicing
+    (like fill in the blank for phrases or article tests for words), and I want
+    to integrate a translation API, so that I don't need to look up the meaning
+    on my own.
+  </p>
+</div>
+<div class="jumbotron">
+  <h1 class="display-4">Need help?</h1>
+  <p class="lead">
+    If you experience a bug or have an idea for a feature, check out the GitHub
+    page <a href="https://github.com/z0glen/language-tutor">here</a>.
+    If you have other questions, feel free to contact me. My information is
+    available <a href="http://zgbauer.com">here</a>.
+  </p>
 </div>
 {% endblock %}
